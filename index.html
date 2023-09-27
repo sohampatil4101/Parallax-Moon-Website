@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="star.png" id="stars">
+        <img src="moon.png" id="moon">
+        <h2 id="text">moon light</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="mountain-background.png" id="mountain_behind">
+        <img src="mountain-front.png" id="mountain_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax scrolling effects</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa velit at facere culpa quidem obcaecati in nihil iste, minima inventore maiores dolorem nesciunt molestiae perferendis labore quibusdam accusamus laudantium quas! <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa velit at facere culpa quidem obcaecati in nihil iste, minima inventore maiores dolorem nesciunt molestiae perferendis labore quibusdam accusamus laudantium quas! <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa velit at facere culpa quidem obcaecati in nihil iste, minima inventore maiores dolorem nesciunt molestiae perferendis labore quibusdam accusamus laudantium quas! <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa velit at facere culpa quidem obcaecati in nihil iste, minima inventore maiores dolorem nesciunt molestiae perferendis labore quibusdam accusamus laudantium quas! <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odit assumenda ex fuga, quia consectetur accusantium fugiat cupiditate fugit neque distinctio illo minima aliquid sit nulla exercitationem laborum obcaecati nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa velit at facere culpa quidem obcaecati in nihil iste, minima inventore maiores dolorem nesciunt molestiae perferendis labore quibusdam accusamus laudantium quas! <br><br></p>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountain_behind')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountain_front = document.getElementById('mountain_front')
+        let header = document.querySelector('header')
+
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.05 + 'px';
+            mountains_behind.style.top = value*0.5 + 'px';
+            mountain_front.style.top = value*0 + 'px';
+            text.style.marginRight = value*4 + 'px';
+            text.style.marginTop = value*1.5 + 'px';
+            btn.style.marginTop = value*1.5 + 'px';
+            header.style.top = value*0.5 + 'px';
+
+        })
+    </script>
+</body>
+</html>
