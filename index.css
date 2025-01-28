@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(#2b1055, #7597de);
-    height: 5000px;
+    height: 2000px;
 }
 header{
     position: absolute;
